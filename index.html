@@ -65,66 +65,56 @@
     }
 
     .badge-time {
-      background: rgba(56, 189, 248, 0.15);
-      border: 1px solid rgba(56, 189, 248, 0.35);
+      background: rgba(56, 189, 248, 0.18);
+      border: 1px solid rgba(56, 189, 248, 0.4);
       color: #7dd3fc;
     }
   </style>
 </head>
 <body class="relative selection:bg-amber-400 selection:text-slate-900 pb-12">
 
-  <!-- هێدەر و ناساندنی سیمپۆزیۆم -->
+  <!-- سەرپەڕە (Header) -->
   <header class="relative z-20 w-full border-b border-white/10 backdrop-blur-md bg-white/[0.03]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-4">
-        <!-- لۆگۆ -->
-        <img src="salahaddin.logo" alt="لۆگۆی زانکۆی سەلاحەدین" class="w-16 h-16 rounded-full border-2 border-amber-400 p-0.5 object-cover bg-white/10 shrink-0" onerror="this.onerror=null; this.src='salahaddin.logo.png';"/>
-        <div>
-          <h1 class="text-lg sm:text-xl font-bold text-white leading-tight">زانکۆی سەڵاحەدین - هەولێر</h1>
-          <p class="text-xs text-amber-300">بەڕێوەبەرایەتی تەندروستی و سەلامەتی</p>
-          <p class="text-[11px] text-slate-300 mt-0.5">بە چاودێری بەڕێز سەرۆکی زانکۆی سەڵاحەدین پ.ی.د کامەران یونس محمدامین</p>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-6 text-center">
+      
+      <!-- لۆگۆ و ناونیشانی زانکۆ -->
+      <div class="flex items-center justify-center gap-4 mb-4">
+        <img src="salahaddin.logo" alt="لۆگۆ" class="w-16 h-16 rounded-full border-2 border-amber-400 p-0.5 object-cover bg-white/10 shrink-0 shadow-lg" onerror="this.onerror=null; this.src='salahaddin.logo.png';"/>
+        <div class="text-right">
+          <h1 class="text-xl sm:text-2xl font-bold text-white leading-tight">زانکۆی سەڵاحەدین - هەولێر</h1>
+          <p class="text-sm text-amber-300 mt-0.5 font-medium">بەڕێوەبەرایەتی تەندروستی و سەلامەتی</p>
         </div>
       </div>
-      <div class="text-center md:text-left">
-        <span class="inline-block text-xs bg-amber-400/10 text-amber-300 border border-amber-400/30 px-3 py-1.5 rounded-full font-bold">
-          "خۆت بپارێزە، ژیان جوانترە بەناونیشانی خۆپارێزی"
-        </span>
+
+      <!-- دەقی چاودێری و ناونیشانی سیمپۆزیۆم -->
+      <div class="glass-card-subtle rounded-2xl p-4 mt-3 border border-white/10 max-w-2xl mx-auto">
+        <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+          بە چاودێری بەڕێز سەرۆکی زانکۆی سەڵاحەدین <strong class="text-white">پ.د کامەران یونس محمدامین</strong>، بەڕێوەبەرایەتی تەندروستی و سەلامەتی سیمپۆزیۆمێک ئەنجام دەدات بە ناونیشانی:
+        </p>
+        <div class="mt-2 text-amber-300 text-sm sm:text-base font-bold">
+          "هەڵمەتی هۆشیاری خۆپارێزی لە نەخۆشی شێرپەنجە"
+        </div>
       </div>
+
     </div>
   </header>
 
-  <main class="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 mt-8">
+  <main class="relative z-10 max-w-xl mx-auto px-4 sm:px-6 mt-8">
     
-    <!-- زانیاری کاتی و دوگمەی پڕۆگرام -->
-    <div class="glass-card-subtle rounded-2xl p-4 mb-6 flex flex-wrap items-center justify-between gap-3 border-r-4 border-r-amber-400 text-xs sm:text-sm">
-      <div class="flex flex-wrap items-center gap-4">
-        <div class="flex items-center gap-1.5">
-          <i data-lucide="calendar" class="w-4 h-4 text-amber-400"></i>
-          <span class="text-white font-bold">21/11/2026</span>
-        </div>
-        <div class="flex items-center gap-1.5">
-          <i data-lucide="clock" class="w-4 h-4 text-sky-400"></i>
-          <span class="text-white font-bold">9:30 ی بەیانی</span>
-        </div>
-        <div class="flex items-center gap-1.5">
-          <i data-lucide="map-pin" class="w-4 h-4 text-rose-400"></i>
-          <span class="text-white font-bold">هۆڵی د. خالید</span>
-        </div>
-      </div>
-      
-      <!-- دوگمەی بینینی پڕۆگرام -->
-      <button onclick="toggleProgramModal()" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sky-500/20 hover:bg-sky-500/30 border border-sky-400/40 text-sky-200 text-xs font-bold transition-all">
-        <i data-lucide="list-ordered" class="w-3.5 h-3.5 text-sky-400"></i>
+    <!-- دوگمەی پڕۆگرامی سیمپۆزیۆم -->
+    <div class="mb-6 text-center">
+      <button onclick="toggleProgramModal()" type="button" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-sky-500/20 hover:bg-sky-500/30 border border-sky-400/40 text-sky-200 text-sm font-bold shadow-lg transition-all active:scale-95">
+        <i data-lucide="calendar-days" class="w-4 h-4 text-sky-400"></i>
         <span>پڕۆگرامی سیمپۆزیۆم</span>
       </button>
     </div>
 
-    <!-- بەشی فۆرمی ناونووسین و وەرگرتنی بڕوانامە -->
+    <!-- بەشی فۆرمی ناونووسین بۆ بڕوانامە -->
     <div class="glass-card rounded-3xl p-6 sm:p-8 border-t-4 border-t-amber-400">
       
       <div class="mb-6 text-center">
         <h2 class="text-xl sm:text-2xl font-bold text-white">فۆرمی ناونووسین بۆ بڕوانامە</h2>
-        <p class="text-xs text-slate-300 mt-1">تکایە ناو و زانیارییەکانت بە وردی بنووسە بۆ دەرچوونی بڕوانامە بە ناوی خۆت.</p>
+        <p class="text-xs text-slate-300 mt-1">تکایە ناو و زانیارییەکانت بە کوردی بنووسە بۆ دەرچوونی بڕوانامە بە ناوی خۆت.</p>
       </div>
 
       <form id="registrationForm" onsubmit="handleRegistration(event)" class="space-y-5">
@@ -186,7 +176,7 @@
           <span id="emailError" class="text-[11px] text-rose-400 hidden">تەنها پیت و هێما دروستەکانی ئیمەیڵی ئینگلیزی ڕێگەپێدراون!</span>
         </div>
 
-        <!-- Submit Button -->
+        <!-- دوگمەی ناردن -->
         <button 
           type="submit" 
           id="submitBtn"
@@ -202,10 +192,11 @@
     </div>
   </main>
 
-  <!-- پەنجەرەی مۆدالی پڕۆگرامی سیمپۆزیۆم (Modal Popup) -->
-  <div id="programModal" class="fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-sm hidden flex items-center justify-center p-4">
-    <div class="glass-card bg-[#28256a]/95 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl p-6 sm:p-7 border border-white/20 shadow-2xl">
+  <!-- پەنجەرەی مۆدالی پڕۆگرامی سیمپۆزیۆم -->
+  <div id="programModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="glass-card bg-[#252264]/95 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl p-5 sm:p-7 border border-white/20 shadow-2xl">
       
+      <!-- سەرەوەی مۆدال -->
       <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-4">
         <h3 class="text-lg font-bold text-white flex items-center gap-2">
           <i data-lucide="calendar-days" class="w-5 h-5 text-amber-400"></i>
@@ -216,76 +207,104 @@
         </button>
       </div>
 
-      <div class="space-y-3.5">
+      <!-- زانیاری کات و شوێن لە ناو مۆدال -->
+      <div class="glass-card-subtle p-3 rounded-xl mb-4 flex flex-wrap items-center justify-around gap-2 text-xs border border-white/10 text-slate-300">
+        <div>بەروار: <strong class="text-white">21/11/2026 (چوارشەممە)</strong></div>
+        <div>کات: <strong class="text-sky-300">9:30 ی بەیانی</strong></div>
+        <div>شوێن: <strong class="text-amber-300">کۆلێژی یاسا - هۆڵی د. خالید</strong></div>
+      </div>
+
+      <!-- لیستی بڕگەکان -->
+      <div class="space-y-3">
         
-        <!-- دەستپێک -->
-        <div class="glass-card-subtle p-3.5 rounded-2xl">
-          <span class="badge-time text-xs px-2.5 py-0.5 rounded-md font-bold">9:30</span>
-          <h4 class="font-bold text-white text-sm mt-1">دەستپێکردنی مەڕاسیم:</h4>
-          <p class="text-xs text-slate-300 mt-1 leading-relaxed">بەخێرهاتن • قورئانی پیرۆز • سروودی نەتەوەیی کوردستان • وتاری بەڕێز ڕاگری کۆلێژی یاسا</p>
-        </div>
-
-        <!-- د. علی حسین -->
-        <div class="glass-card-subtle p-3.5 rounded-2xl flex items-center gap-3.5">
-          <img src="ali.jpg" alt="د. علی حسین" class="w-13 h-13 rounded-full object-cover shrink-0 border-2 border-amber-400/80 p-0.5 w-12 h-12" onerror="this.src='https://placehold.co/100x100/30308a/ffffff?text=Ali'"/>
-          <div class="flex-1">
-            <span class="badge-time text-xs px-2.5 py-0.5 rounded-md font-bold">10:00</span>
-            <h4 class="font-bold text-white text-sm mt-0.5">شێرپەنجە - تێگەیشتنی هۆکارەکانی و مەترسییەکانی</h4>
-            <p class="text-xs text-amber-300 font-medium">د. علی حسین ڕۆژبەیانی (پسپۆڕی نەشتەرگەری ئێسک و شکان)</p>
+        <!-- 9:30 مەڕاسیم -->
+        <div class="glass-card-subtle p-3.5 rounded-2xl flex items-start gap-4">
+          <div class="badge-time px-3 py-1.5 rounded-xl font-bold text-sm shrink-0">9:30</div>
+          <div>
+            <h4 class="font-bold text-white text-sm">دەستپێکردنی مەڕاسیم:</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">بەخێرهاتن • قورئانی پیرۆز • سروودی نەتەوەیی کوردستان • وتاری بەڕێز ڕاگری کۆلێژی یاسا</p>
           </div>
         </div>
 
-        <!-- پ.د. هاژە جمال -->
-        <div class="glass-card-subtle p-3.5 rounded-2xl flex items-center gap-3.5">
-          <img src="hazha.jpg" alt="پ.د. هاژە جمال" class="w-12 h-12 rounded-full object-cover shrink-0 border-2 border-sky-400/80 p-0.5" onerror="this.src='https://placehold.co/100x100/30308a/ffffff?text=Hazha'"/>
-          <div class="flex-1">
-            <span class="badge-time text-xs px-2.5 py-0.5 rounded-md font-bold">10:15</span>
-            <h4 class="font-bold text-white text-sm mt-0.5">ڕووبەڕووبوونەوەی شێرپەنجە پێگەوە: زانست، هۆشیاری و توێژینەوە</h4>
-            <p class="text-xs text-sky-300 font-medium">پ.د. هاژە جمال هیدایەت (مامۆستای زانکۆ)</p>
-          </div>
-        </div>
-
-        <!-- د. فەرمان یاسین -->
-        <div class="glass-card-subtle p-3.5 rounded-2xl flex items-center gap-3.5">
-          <img src="farman.jpg" alt="د. فەرمان یاسین" class="w-12 h-12 rounded-full object-cover shrink-0 border-2 border-amber-400/80 p-0.5" onerror="this.src='https://placehold.co/100x100/30308a/ffffff?text=Farman'"/>
-          <div class="flex-1">
-            <span class="badge-time text-xs px-2.5 py-0.5 rounded-md font-bold">10:30</span>
-            <h4 class="font-bold text-white text-sm mt-0.5">نیشانەکان و چۆنیەتی دەستنیشانکردن و چارەسەرکردنی شێرپەنجەی مەمک</h4>
-            <p class="text-xs text-amber-300 font-medium">د. فەرمان یاسین شەریف (پسپۆڕی نەشتەرگەری گشتی)</p>
-          </div>
-        </div>
-
-        <!-- م. ئاریان حسین و شانۆگەری -->
-        <div class="glass-card-subtle p-3.5 rounded-2xl flex items-center gap-3.5">
-          <img src="aryann.jpg" alt="م. ئاریان حسین دزەیی" class="w-12 h-12 rounded-full object-cover shrink-0 border-2 border-pink-400/80 p-0.5" onerror="this.src='https://placehold.co/100x100/30308a/ffffff?text=Aryan'"/>
-          <div class="flex-1">
-            <div class="flex flex-wrap gap-2 items-center">
-              <span class="badge-time text-xs px-2 py-0.5 rounded-md font-bold">10:30 شانۆگەری</span>
-              <span class="badge-time text-xs px-2 py-0.5 rounded-md font-bold">11:00 پانێڵ</span>
+        <!-- 10:00 د. علی حسین -->
+        <div class="glass-card-subtle p-3.5 rounded-2xl flex items-center gap-4">
+          <div class="badge-time px-3 py-1.5 rounded-xl font-bold text-sm shrink-0">10:00</div>
+          <div class="flex-1 flex items-center justify-between gap-3">
+            <div>
+              <h4 class="font-bold text-white text-sm">شێرپەنجە - تێگەیشتنی هۆکارەکانی و مەترسییەکانی</h4>
+              <p class="text-xs text-amber-300 mt-0.5">د. علی حسین ڕۆژبەیانی - پسپۆڕی نەشتەرگەری ئێسک و شکان</p>
             </div>
-            <h4 class="font-bold text-white text-sm mt-1">پانێڵەکە بەڕێوەدەبردرێت لە لایەن:</h4>
-            <p class="text-xs text-pink-300 font-medium">م. ئاریان حسین دزەیی (بەڕێوەبەری تەندروستی و سەلامەتی زانکۆی سەڵاحەدین)</p>
+            <img src="ali.jpg" alt="د. علی حسین" class="w-12 h-12 rounded-full object-cover shrink-0 border-2 border-amber-400 p-0.5" onerror="this.src='https://placehold.co/100x100/30308a/ffffff?text=Ali'"/>
           </div>
         </div>
 
-        <!-- هەڵسەنگاندن -->
-        <div class="glass-card-subtle p-3 rounded-2xl">
-          <span class="badge-time text-xs px-2 py-0.5 rounded-md font-bold">11:30</span>
-          <p class="text-xs text-slate-200 mt-1 leading-relaxed">هەڵسەنگاندن (Feedback) • دەرئەنجام و ڕاسپاردەکان • بەخشینی ڕێزلێنان و بڕوانامەکان • وێنەی بەکۆمەڵ</p>
+        <!-- 10:15 پ.د. هاژە جمال -->
+        <div class="glass-card-subtle p-3.5 rounded-2xl flex items-center gap-4">
+          <div class="badge-time px-3 py-1.5 rounded-xl font-bold text-sm shrink-0">10:15</div>
+          <div class="flex-1 flex items-center justify-between gap-3">
+            <div>
+              <h4 class="font-bold text-white text-sm">ڕووبەڕووبوونەوەی شێرپەنجە پێگەوە: زانست، هۆشیاری و توێژینەوە</h4>
+              <p class="text-xs text-sky-300 mt-0.5">پ.د. هاژە جمال هیدایەت - مامۆستای زانکۆ</p>
+            </div>
+            <img src="hazha.jpg" alt="پ.د. هاژە جمال" class="w-12 h-12 rounded-full object-cover shrink-0 border-2 border-sky-400 p-0.5" onerror="this.src='https://placehold.co/100x100/30308a/ffffff?text=Hazha'"/>
+          </div>
         </div>
 
-        <!-- ناوتۆمارکردن -->
-        <div class="p-3 rounded-2xl border border-dashed border-amber-400/40 bg-amber-400/10 flex items-center justify-between text-xs text-amber-200 font-bold">
-          <div class="flex items-center gap-2">
-            <i data-lucide="coffee" class="w-4 h-4 text-amber-400"></i>
-            <span>12:00 ناوتۆمارکردن + Coffee Break</span>
+        <!-- 10:30 د. فەرمان یاسین -->
+        <div class="glass-card-subtle p-3.5 rounded-2xl flex items-center gap-4">
+          <div class="badge-time px-3 py-1.5 rounded-xl font-bold text-sm shrink-0">10:30</div>
+          <div class="flex-1 flex items-center justify-between gap-3">
+            <div>
+              <h4 class="font-bold text-white text-sm">نیشانەکان و چۆنیەتی دەستنیشانکردن و چارەسەرکردنی شێرپەنجەی مەمک</h4>
+              <p class="text-xs text-amber-300 mt-0.5">د. فەرمان یاسین شەریف - پسپۆڕی نەشتەرگەری گشتی</p>
+            </div>
+            <img src="farman.jpg" alt="د. فەرمان یاسین" class="w-12 h-12 rounded-full object-cover shrink-0 border-2 border-amber-400 p-0.5" onerror="this.src='https://placehold.co/100x100/30308a/ffffff?text=Farman'"/>
           </div>
+        </div>
+
+        <!-- 10:30 شانۆگەری (جیاکراوە و سەربەخۆ) -->
+        <div class="glass-card-subtle p-3.5 rounded-2xl flex items-center gap-4 border-r-4 border-r-pink-400">
+          <div class="badge-time px-3 py-1.5 rounded-xl font-bold text-sm shrink-0">10:30</div>
+          <div>
+            <h4 class="font-bold text-pink-300 text-sm">شانۆگەری</h4>
+            <p class="text-xs text-slate-200 mt-0.5">شانۆگەرییەک ئەنجام دەدرێت.</p>
+          </div>
+        </div>
+
+        <!-- 11:00 پانێڵ م. ئاریان حسین -->
+        <div class="glass-card-subtle p-3.5 rounded-2xl flex items-center gap-4">
+          <div class="badge-time px-3 py-1.5 rounded-xl font-bold text-sm shrink-0">11:00</div>
+          <div class="flex-1 flex items-center justify-between gap-3">
+            <div>
+              <h4 class="font-bold text-white text-sm">بەڕێوەچوونی پانێڵ</h4>
+              <p class="text-xs text-slate-200 mt-0.5">پانێڵەکە بەڕێوەدەبردرێت لە لایەن:</p>
+              <p class="text-xs text-pink-300 font-semibold mt-0.5">م. ئاریان حسین دزەیی - بەڕێوەبەری تەندروستی و سەلامەتی زانکۆی سەڵاحەدین</p>
+            </div>
+            <img src="aryann.jpg" alt="م. ئاریان حسین" class="w-12 h-12 rounded-full object-cover shrink-0 border-2 border-pink-400 p-0.5" onerror="this.src='https://placehold.co/100x100/30308a/ffffff?text=Aryan'"/>
+          </div>
+        </div>
+
+        <!-- 11:30 هەڵسەنگاندن و بڕوانامە -->
+        <div class="glass-card-subtle p-3 rounded-2xl flex items-center gap-4">
+          <div class="badge-time px-3 py-1.5 rounded-xl font-bold text-sm shrink-0">11:30</div>
+          <p class="text-xs text-slate-200 leading-relaxed">
+            هەڵسەنگاندن (Feedback) • دەرئەنجام و ڕاسپاردەکان • بەخشینی ڕێزلێنان و بڕوانامەکان • وێنەی بەکۆمەڵ
+          </p>
+        </div>
+
+        <!-- 12:00 Coffee Break -->
+        <div class="p-3.5 rounded-2xl border border-dashed border-amber-400/50 bg-amber-400/10 flex items-center justify-between text-xs text-amber-200 font-bold">
+          <div class="flex items-center gap-3">
+            <span class="badge-time px-3 py-1 rounded-lg text-xs">12:00</span>
+            <span>ناوتۆمارکردن + Coffee Break</span>
+          </div>
+          <i data-lucide="coffee" class="w-4 h-4 text-amber-400"></i>
         </div>
 
       </div>
 
       <div class="mt-5 text-center">
-        <button onclick="toggleProgramModal()" type="button" class="px-5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-all">
+        <button onclick="toggleProgramModal()" type="button" class="px-6 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-all">
           داخستن
         </button>
       </div>
@@ -362,7 +381,7 @@
 
         if (result.status === "success") {
           responseMessage.className = "mt-4 p-4 rounded-xl text-xs bg-emerald-500/20 border border-emerald-400/40 text-emerald-200 block";
-          responseMessage.innerHTML = `سوپاس بەڕێز <strong>${fullName}</strong>، بڕوانامەکەت دروستکرا و نێردرا بۆ <strong>${email}</strong>.`;
+          responseMessage.innerHTML = `سوپاس بەڕێز <strong>${fullName}</strong>، بڕوانامەکەت بە سەرکەوتوویی دروستکرا و نێردرا بۆ ئیمەیڵی <strong>${email}</strong>.`;
           document.getElementById('registrationForm').reset();
         } else {
           throw new Error(result.message || "هەڵەیەک ڕوویدا");
