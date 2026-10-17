@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سیمپۆزیۆمی هەڵمەتی هۆشیاری و خۆپارێزی لە نەخۆشی شێرپەنجە</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    @font-face {
+      font-family: 'NRT-Reg';
+      src: url('NRT-Reg.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      font-family: 'NRT-Reg', sans-serif !important;
+    }
+
+    body {
+      background: linear-gradient(135deg, #2b2875 0%, #463b99 45%, #2a337e 75%, #1f235e 100%);
+      min-height: 100vh;
+      color: #f8fafc;
+      overflow-x: hidden;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 16px 36px -10px rgba(10, 10, 35, 0.45);
+    }
+
+    .glass-card-subtle {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .glass-input {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.25s ease;
+    }
+    .glass-input:focus {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: #F5B800;
+      box-shadow: 0 0 0 3px rgba(245, 184, 0, 0.25);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #F5B800 0%, #e09e00 100%);
+      box-shadow: 0 8px 24px -4px rgba(245, 184, 0, 0.45);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-gold:hover {
+      box-shadow: 0 12px 28px 0px rgba(245, 184, 0, 0.65);
+      transform: translateY(-1px);
+    }
+
+    .badge-time {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #7dd3fc;
+    }
+  </style>
+</head>
+<body class="relative selection:bg-amber-400 selection:text-slate-900 pb-12">
+
+  <!-- هێدەر و ناساندنی سیمپۆزیۆم -->
+  <header class="relative z-20 w-full border-b border-white/10 backdrop-blur-md bg-white/[0.03]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <img src="salahaddin.logo" alt="لۆگۆی زانکۆی سەلاحەدین" class="w-16 h-16 rounded-full border-2 border-amber-400 p-0.5 object-contain bg-white/10" onerror="this.src='https://placehold.co/80x80/30308a/ffffff?text=Logo'"/>
+        <div>
+          <h1 class="text-lg sm:text-xl font-bold text-white leading-tight">زانکۆی سەڵاحەدین - هەولێر</h1>
+          <p class="text-xs text-amber-300">بەڕێوەبەرایەتی تەندروستی و سەلامەتی</p>
+          <p class="text-[11px] text-slate-300 mt-0.5">بە چاودێری بەڕێز سەرۆکی زانکۆی سەڵاحەدین پ.ی.د کامەران یونس محمدامین</p>
+        </div>
+      </div>
+      <div class="text-center md:text-left">
+        <span class="inline-block text-xs bg-amber-400/10 text-amber-300 border border-amber-400/30 px-3 py-1.5 rounded-full font-bold">
+          "خۆت بپارێزە، ژیان جوانترە بەناونیشانی خۆپارێزی"
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+    
+    <!-- زانیاری شوێن و کات -->
+    <div class="glass-card-subtle rounded-2xl p-4 sm:p-5 mb-8 flex flex-wrap items-center justify-around gap-4 border-r-4 border-r-amber-400 text-sm">
+      <div class="flex items-center gap-2">
+        <i data-lucide="calendar" class="w-4 h-4 text-amber-400"></i>
+        <span class="text-slate-300">بەروار:</span>
+        <span class="font-bold text-white">21/11/2026 (چوارشەممە)</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i data-lucide="clock" class="w-4 h-4 text-sky-400"></i>
+        <span class="text-slate-300">کاتژمێر:</span>
+        <span class="font-bold text-white">9:30 ی بەیانی</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i data-lucide="map-pin" class="w-4 h-4 text-rose-400"></i>
+        <span class="text-slate-300">شوێن:</span>
+        <span class="font-bold text-white">کۆلێژی یاسا - هۆڵی د. خالید</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- بەشی پڕۆگرامی سیمپۆزیۆم -->
+      <section class="lg:col-span-7 space-y-4">
+        <div class="glass-card rounded-3xl p-6 sm:p-7">
+          <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
+            <h2 class="text-xl font-bold text-white flex items-center gap-2">
+              <i data-lucide="calendar-days" class="w-5 h-5 text-amber-400"></i>
+              پڕۆگرامی سیمپۆزیۆم
+            </h2>
+            <span class="text-xs text-sky-300 bg-sky-500/10 border border-sky-400/30 px-3 py-1 rounded-full">دەستپێک 9:30</span>
+          </div>
+
+          <div class="space-y-4">
+            
+            <!-- دەستپێک -->
+            <div class="glass-card-subtle p-4 rounded-2xl flex items-start justify-between gap-3">
+              <div>
+                <span class="badge-time text-xs px-2.5 py-0.5 rounded-md font-bold">9:30</span>
+                <h3 class="font-bold text-white text-sm mt-1">دەستپێکردنی مەڕاسیم:</h3>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">بەخێرهاتن • قورئانی پیرۆز • سروودی نەتەوەیی کوردستان • وتاری بەڕێز ڕاگری کۆلێژی یاسا</p>
+              </div>
+            </div>
+
+            <!-- د. علی حسین -->
+            <div class="glass-card-subtle p-4 rounded-2xl flex items-center gap-4">
+              <img src="ali.jpg" alt="د. علی حسین" class="w-14 h-14 rounded-full object-cover shrink-0 border-2 border-amber-400/80 p-0.5" onerror="this.src='https://placehold.co/100x100/30308a/ffffff?text=Ali'"/>
+              <div class="flex-1">
+                <span class="badge-time text-xs px-2.5 py-0.5 rounded-md font-bold">10:00</span>
+                <h3 class="font-bold text-white text-sm mt-0.5">شێرپەنجە - تێگەیشتنی هۆکارەکانی و مەترسییەکانی</h3>
+                <p class="text-xs text-amber-300 font-medium">د. علی حسین ڕۆژبەیانی (پسپۆڕی نەشتەرگەری ئێسک و شکان)</p>
+              </div>
+            </div>
+
+            <!-- پ.د. هاژە جمال -->
+            <div class="glass-card-subtle p-4 rounded-2xl flex items-center gap-4">
+              <img src="hazha.jpg" alt="پ.د. هاژە جمال" class="w-14 h-14 rounded-full object-cover shrink-0 border-2 border-sky-400/80 p-0.5" onerror="this.src='https://placehold.co/100x100/30308a/ffffff?text=Hazha'"/>
+              <div class="flex-1">
+                <span class="badge-time text-xs px-2.5 py-0.5 rounded-md font-bold">10:15</span>
+                <h3 class="font-bold text-white text-sm mt-0.5">ڕووبەڕووبوونەوەی شێرپەنجە پێگەوە: زانست، هۆشیاری و توێژینەوە</h3>
+                <p class="text-xs text-sky-300 font-medium">پ.د. هاژە جمال هیدایەت (مامۆستای زانکۆ)</p>
+              </div>
+            </div>
+
+            <!-- د. فەرمان یاسین -->
+            <div class="glass-card-subtle p-4 rounded-2xl flex items-center gap-4">
+              <img src="farman.jpg" alt="د. فەرمان یاسین" class="w-14 h-14 rounded-full object-cover shrink-0 border-2 border-amber-400/80 p-0.5" onerror="this.src='https://placehold.co/100x100/30308a/ffffff?text=Farman'"/>
+              <div class="flex-1">
+                <span class="badge-time text-xs px-2.5 py-0.5 rounded-md font-bold">10:30</span>
+                <h3 class="font-bold text-white text-sm mt-0.5">نیشانەکان و چۆنیەتی دەستنیشانکردن و چارەسەرکردنی شێرپەنجەی مەمک</h3>
+                <p class="text-xs text-amber-300 font-medium">د. فەرمان یاسین شەریف (پسپۆڕی نەشتەرگەری گشتی)</p>
+              </div>
+            </div>
+
+            <!-- م. ئاریان حسین و شانۆگەری -->
+            <div class="glass-card-subtle p-4 rounded-2xl flex items-center gap-4">
+              <img src="aryann.jpg" alt="م. ئاریان حسین دزەیی" class="w-14 h-14 rounded-full object-cover shrink-0 border-2 border-pink-400/80 p-0.5" onerror="this.src='https://placehold.co/100x100/30308a/ffffff?text=Aryan'"/>
+              <div class="flex-1">
+                <div class="flex flex-wrap gap-2 items-center">
+                  <span class="badge-time text-xs px-2 py-0.5 rounded-md font-bold">10:30 بەڕێوەچوونی شانۆگەرییەک</span>
+                  <span class="badge-time text-xs px-2 py-0.5 rounded-md font-bold">11:00 بەڕێوەچوونی پانێڵ</span>
+                </div>
+                <h3 class="font-bold text-white text-sm mt-1">پانێڵەکە بەڕێوەدەبردرێت لە لایەن:</h3>
+                <p class="text-xs text-pink-300 font-medium">م. ئاریان حسین دزەیی (بەڕێوەبەری تەندروستی و سەلامەتی زانکۆی سەڵاحەدین)</p>
+              </div>
+            </div>
+
+            <!-- هەڵسەنگاندن و بڕوانامەکان -->
+            <div class="glass-card-subtle p-4 rounded-2xl">
+              <span class="badge-time text-xs px-2.5 py-0.5 rounded-md font-bold">11:30</span>
+              <p class="text-xs text-slate-200 mt-1 leading-relaxed">
+                هەڵسەنگاندن (Feedback) • دەرئەنجام و ڕاسپاردەکان • بەخشینی ڕێزلێنان و بڕوانامەکان • وێنەی بەکۆمەڵ
+              </p>
+            </div>
+
+            <!-- ناوتۆمارکردن و کۆتایی -->
+            <div class="p-4 rounded-2xl border border-dashed border-amber-400/40 bg-amber-400/10 flex items-center justify-between text-xs text-amber-200">
+              <div class="flex items-center gap-2 font-bold">
+                <i data-lucide="coffee" class="w-4 h-4 text-amber-400"></i>
+                <span>12:00 ناوتۆمارکردن + Coffee Break</span>
+              </div>
+              <span class="bg-amber-400/20 px-2 py-0.5 rounded text-[11px]">کۆتایی پرۆگرام</span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- بەشی فۆرمی ناونووسین و وەرگرتنی بڕوانامە -->
+      <section class="lg:col-span-5">
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border-t-4 border-t-amber-400">
+          
+          <div class="mb-6">
+            <h2 class="text-xl font-bold text-white">فۆرمی ناونووسین بۆ بڕوانامە</h2>
+            <p class="text-xs text-slate-300 mt-1">تکایە ناو و زانیارییەکانت بە وردی بنووسە بۆ دەرچوونی بڕوانامە بە ناوی خۆت.</p>
+          </div>
+
+          <form id="registrationForm" onsubmit="handleRegistration(event)" class="space-y-5">
+            
+            <!-- ناوی سیانی -->
+            <div class="space-y-1.5">
+              <label for="fullName" class="block text-xs font-semibold text-slate-200">
+                ناوی سیانی (تەنها پیتی کوردی/عەرەبی) <span class="text-amber-400">*</span>
+              </label>
+              <div class="relative">
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  name="fullName" 
+                  required
+                  placeholder="وەک: دانا کەمال ڕەشید"
+                  class="glass-input w-full px-4 py-3 rounded-xl text-sm text-white placeholder-slate-400 focus:outline-none"
+                  oninput="validateKurdishOnly(this)"
+                />
+              </div>
+              <span id="nameError" class="text-[11px] text-rose-400 hidden">تەنها دەتوانیت پیتی کوردی و عەرەبی بنووسیت!</span>
+            </div>
+
+            <!-- زانکۆ / کۆلێژ -->
+            <div class="space-y-1.5">
+              <label for="college" class="block text-xs font-semibold text-slate-200">
+                زانکۆ / کۆلێژ (تەنها پیتی کوردی/عەرەبی) <span class="text-amber-400">*</span>
+              </label>
+              <div class="relative">
+                <input 
+                  type="text" 
+                  id="college" 
+                  name="college" 
+                  required
+                  placeholder="وەک: زانکۆی سەڵاحەدین - کۆلێژی یاسا"
+                  class="glass-input w-full px-4 py-3 rounded-xl text-sm text-white placeholder-slate-400 focus:outline-none"
+                  oninput="validateKurdishOnly(this)"
+                />
+              </div>
+              <span id="collegeError" class="text-[11px] text-rose-400 hidden">تەنها دەتوانیت پیتی کوردی و عەرەبی بنووسیت!</span>
+            </div>
+
+            <!-- ئیمەیڵ -->
+            <div class="space-y-1.5">
+              <label for="email" class="block text-xs font-semibold text-slate-200">
+                ئیمەیڵ (تەنها پیتی ئینگلیزی) <span class="text-amber-400">*</span>
+              </label>
+              <div class="relative" dir="ltr">
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required
+                  placeholder="name@example.com"
+                  class="glass-input w-full px-4 py-3 rounded-xl text-sm text-white placeholder-slate-400 focus:outline-none text-left"
+                  oninput="validateEmailEnglishOnly(this)"
+                />
+              </div>
+              <span id="emailError" class="text-[11px] text-rose-400 hidden">تەنها پیت و هێما دروستەکانی ئیمەیڵی ئینگلیزی ڕێگەپێدراون!</span>
+            </div>
+
+            <!-- Submit Button -->
+            <button 
+              type="submit" 
+              id="submitBtn"
+              class="btn-gold w-full py-3.5 px-6 rounded-xl font-bold text-slate-950 text-sm flex items-center justify-center gap-2 group active:scale-[0.98] mt-2">
+              <span>تۆمارکردن و وەرگرتنی شەهادە</span>
+              <i data-lucide="send" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
+            </button>
+
+          </form>
+
+          <div id="responseMessage" class="hidden mt-4 p-4 rounded-xl text-xs transition-all"></div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      lucide.createIcons();
+    });
+
+    // ۱. ڕێگری لە نووسینی هەموو شتێک جگە لە پیتی کوردی/عەرەبی و بۆشایی
+    function validateKurdishOnly(input) {
+      const kurdishArabicRegex = /^[\u0600-\u06FF\s]*$/;
+      const errorSpan = input.id === 'fullName' ? document.getElementById('nameError') : document.getElementById('collegeError');
+      
+      if (!kurdishArabicRegex.test(input.value)) {
+        input.value = input.value.replace(/[^\u0600-\u06FF\s]/g, '');
+        errorSpan.classList.remove('hidden');
+      } else {
+        errorSpan.classList.add('hidden');
+      }
+    }
+
+    // ۲. ڕێگری لە نووسینی پیت جگە لە پیتی ئینگلیزی و ژمارە و کارەکتەرەکانی ئیمەیڵ (@ . _ -)
+    function validateEmailEnglishOnly(input) {
+      const emailAllowedRegex = /^[a-zA-Z0-9@._-]*$/;
+      const errorSpan = document.getElementById('emailError');
+
+      if (!emailAllowedRegex.test(input.value)) {
+        input.value = input.value.replace(/[^a-zA-Z0-9@._-]/g, '');
+        errorSpan.classList.remove('hidden');
+      } else {
+        errorSpan.classList.add('hidden');
+      }
+    }
+
+    // لینکی Web Appی Apps Scriptەکەت
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwKsbE4aovEmptDNREs8304IJOEVxl1_lZSxB-nzgDcSvz3fuEZZWA0dppTRMAOzc4S2Q/exec";
+
+    async function handleRegistration(e) {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('submitBtn');
+      const responseMessage = document.getElementById('responseMessage');
+      const fullName = document.getElementById('fullName').value.trim();
+      const college = document.getElementById('college').value.trim();
+      const email = document.getElementById('email').value.trim();
+
+      if (!fullName || !college || !email) return;
+
+      const originalBtnHTML = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<span>تکایە کەمێک چاوەڕێبە...</span>`;
+
+      try {
+        const response = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams({
+            fullName: fullName,
+            college: college,
+            email: email
+          })
+        });
+
+        const result = await response.json();
+
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
+
+        if (result.status === "success") {
+          responseMessage.className = "mt-4 p-4 rounded-xl text-xs bg-emerald-500/20 border border-emerald-400/40 text-emerald-200 block";
+          responseMessage.innerHTML = `سوپاس بەڕێز <strong>${fullName}</strong>، بڕوانامەکەت دروستکرا و نێردرا بۆ <strong>${email}</strong>.`;
+          document.getElementById('registrationForm').reset();
+        } else {
+          throw new Error(result.message || "هەڵەیەک ڕوویدا");
+        }
+      } catch (err) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
+
+        responseMessage.className = "mt-4 p-4 rounded-xl text-xs bg-rose-500/20 border border-rose-400/40 text-rose-200 block";
+        responseMessage.innerHTML = "نەتوانرا تۆمار بکرێت! تکایە دووبارە هەوڵبدەرەوە.";
+      }
+    }
+  </script>
+</body>
+</html>
